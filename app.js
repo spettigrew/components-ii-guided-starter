@@ -56,20 +56,16 @@ function DogCard(imageUrl, titleText) {
 
             // Promise was rejected
             .catch((error) => {
-
+                console.log('Network request was unsuccessful')
                 console.log(error)
     })
-
-    const getButton = document.querySelector('#getdogs')
-
-
-    // network request finished
-    response.data.message.forEach((item) => {
-        
-console.log(response)
-        console.log('Network request was unsuccessful')
-    })
-
-
 })
+//     const button = document.querySelector('#getdogs')
 
+
+//     // network request finished
+//     response.data.message.forEach((item) => {
+        
+// console.log(response)
+       
+//     })

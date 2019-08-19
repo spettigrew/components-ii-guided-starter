@@ -27,14 +27,15 @@ function DogCard(imageUrl, titleText) {
 }
 
 // const dog1 = DogCard('https://images.dog.ceo/breeds/husky/20180924_193829.jpg', 'Husky'),
-// const dog2 = ('https://images.dog.ceo/breeds/husky/n02110185_1066.jpg', 'Husky'),
-// const dog3 = ('https://images.dog.ceo/breeds/husky/n02110185_2736.jpg', 'Husky')
+// const dog2 = DogCard('https://images.dog.ceo/breeds/husky/n02110185_1066.jpg', 'Husky'),
+// const dog3 = DogCard('https://images.dog.ceo/breeds/husky/n02110185_2736.jpg', 'Husky')
     
-//     const container = document.querySelector('.dogs')
-//     container.appendChild(dog1)
-//     container.appendChild(dog2)
-//     container.appendChild(dog3)
+//    const container = document.querySelector('.dogs')
+    // container.appendChild(dog1)
+    // container.appendChild(dog2)
+    // container.appendChild(dog3)
 
+    // const button = document.querySelector('#getdogs')
 
 // Don't make network request until button is clicked
     button.addEventListener('click', () => {
@@ -43,8 +44,14 @@ function DogCard(imageUrl, titleText) {
         // Promise has resolved
             .then((response) => { 
                 console.log('Network request was successful')
-
+                // Network request finished.
                 // Data that comes back from the server
+               
+                // response.data.message.forEach((item) => {
+                //     const dogCard = DogCard(item, 'Husky')
+                //     container.appendChild(dogCard)
+                // })
+
                 const imageUrls = response.data.message
 
                 // Create a component for each image returned
@@ -60,12 +67,3 @@ function DogCard(imageUrl, titleText) {
                 console.log(error)
     })
 })
-//     const button = document.querySelector('#getdogs')
-
-
-//     // network request finished
-//     response.data.message.forEach((item) => {
-        
-// console.log(response)
-       
-//     })
